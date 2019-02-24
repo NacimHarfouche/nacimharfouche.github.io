@@ -36,12 +36,12 @@ buttonElt.addEventListener("click", function() {
             saveIt += tab[symbol];
         }
     }
-    paraElt.textContent = saveIt;
+    /*paraElt.textContent = saveIt;*/
     inputElt.value = saveIt;
     console.log(saveIt);
 });
 
-////////////////////////////////////////////////////
+// button to copy the password
 const buttonCopyElt = document.getElementById("copy");
 const inputElt = document.getElementById("password");
 buttonCopyElt.addEventListener("click", function() {

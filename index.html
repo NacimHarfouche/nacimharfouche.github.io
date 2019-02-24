@@ -5,23 +5,49 @@
 <head lang="fr">
     <meta charset="utf-8">
     <title>Générateur de mot de passe - WPA / WPA2</title>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- css style -->
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
-   <h1>Générateur de mot de passe - WPA / WPA2</h1>
-   <p>Cliquez sur le bouton pour générer un mot de passe Aléatoire :</p>
-    <p id="para"></p>
-    <div>
-        <input type="text" id="password" placeholder="PassWord" />
-        <button type="button" id="copy">copy</button>
-    </div>
+    <header>
+       <h1>Generator of PassWord - WPA / WPA2</h1>
+    </header>
     
+    <main>
+       <ol>
+           <li>Choose the length of the password.</li>
+           <li>Config the characters.</li>
+           <li>Click on the bouton to generate a random password.</li>
+       </ol>
+        <div>
+            <input type="text" id="password" size="50" />
+            <button type="button" id="copy"><i class="fas fa-copy"></i> Copy</button>
+        </div>
+        <div>
+        <input type="text" id="textinput" size="1"/>
+        <label for="">Length of the password</label>
+        </div>
+        <div>
+        <input type="checkbox" id="lowerCase" name="lowerCase"/>
+        <label for="lowerCase" class="checkBoxText">Lower Case</label>
+        </div>
+        <div>
+        <input type="checkbox" id="upperCase" name="upperCase"/>
+        <label for="upperCase" class="checkBoxText">Upper Case</label>
+        </div>
+        <div>
+        <input type="checkbox" id="specialChar" name="specialChar"/>
+        <label for="specialChar" class="checkBoxText">Special Characters</label>
+        </div>
+        <br/>
+        <button type="button" id="generate">Generate</button>
+    </main>
     
-    <label for="">Taille du mot de passe :</label>
-    <input type="text" id="textinput">
-    <br/>
-    <button type="button" id="generate">générer</button>
-    
+    <footer>
+        <p>Created by <a href="https://github.com/NacimHarfouche">Nacim Harfouche</a></p>
+    </footer>
     <script src="main.js"></script>    
 </body>
 
