@@ -2,7 +2,7 @@
 
 <html>
 
-<head lang="fr">
+<head lang="en">
     <meta charset="utf-8">
     <title>Générateur de mot de passe - WPA / WPA2</title>
     <!-- font Awesome -->
@@ -17,7 +17,7 @@
     
     <main>
        <ol>
-           <li>Choose the length of the password.</li>
+           <li>Choose the password length.</li>
            <li>Config the characters.</li>
            <li>Click on the bouton to generate a random password.</li>
        </ol>
@@ -25,24 +25,26 @@
             <input type="text" id="password" size="50" />
             <button type="button" id="copy"><i class="fas fa-copy"></i> Copy</button>
         </div>
-        <div>
-        <input type="text" id="textinput" size="1"/>
-        <label for="">Length of the password</label>
-        </div>
-        <div>
-        <input type="checkbox" id="lowerCase" name="lowerCase"/>
-        <label for="lowerCase" class="checkBoxText">Lower Case</label>
-        </div>
-        <div>
-        <input type="checkbox" id="upperCase" name="upperCase"/>
-        <label for="upperCase" class="checkBoxText">Upper Case</label>
-        </div>
-        <div>
-        <input type="checkbox" id="specialChar" name="specialChar"/>
-        <label for="specialChar" class="checkBoxText">Special Characters</label>
-        </div>
-        <br/>
-        <button type="button" id="generate">Generate</button>
+        <form>
+            <div>
+            <input type="number" id="textinput" size="1"/>
+            <label for="">Password Length.</label>
+            </div>
+            <div>
+            <input type="checkbox" id="lowerCase" name="lowerCase"/>
+            <label for="lowerCase" >Lower Case</label>
+            </div>
+            <div>
+            <input type="checkbox" id="upperCase" name="upperCase"/>
+            <label for="upperCase" >Upper Case</label>
+            </div>
+            <div>
+            <input type="checkbox" id="specialChar" name="specialChar"/>
+            <label for="specialChar" class="checkBoxText">Special Characters (ON)</label>
+            </div>
+            <br/>
+            <button type="button" id="generate">Generate</button>
+        </form>
     </main>
     
     <footer>

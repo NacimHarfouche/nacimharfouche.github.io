@@ -1,5 +1,5 @@
 // array that contains the characters
-const tab = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "%", ",", "!", "-", "#", "+", "&", "/"];
+const arrayChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "%", ",", "!", "-", "#", "+", "&", "/"];
 // button
 let buttonElt = document.getElementById("generate");
 
@@ -18,25 +18,34 @@ let saveIt = new String();
 
 // generates a random number
 function randomNumber(tab) {
+    let inputLowerElt = document.getElementById("lowerCase").checked;
+    let inputUpperElt = document.getElementById("upperCase").checked;
+    let inputSpecialElt = document.getElementById("specialChar").checked;
+    zeroOrOne = ""; // reset
     symbol = Math.floor(Math.random() * tab.length);
-    zeroOrOne = Math.floor(Math.random() * 2);
+    if (inputLowerElt === true && inputUpperElt === true) {
+        zeroOrOne = Math.floor(Math.random() * 2);
+    } else if (inputLowerElt === false && inputUpperElt === true) {
+        zeroOrOne = 1;
+    } else if (inputLowerElt === true && inputUpperElt === false) {
+        zeroOrOne = 0;
+    }
 }
 
 // on click it generate a pass
 buttonElt.addEventListener("click", function() {
     // get the value of the chosen length
     chooseLength = document.getElementById("textinput").value;
-    saveIt = "";
+    saveIt = ""; // reset
     for (let i = 0; i < chooseLength; i++) {
-        randomNumber(tab);
+        randomNumber(arrayChars);
         if (zeroOrOne === 1 && symbol < 26) {
-            let upper = tab[symbol].toUpperCase();
+            let upper = arrayChars[symbol].toUpperCase();
             saveIt += upper;
         } else {
-            saveIt += tab[symbol];
+            saveIt += arrayChars[symbol];
         }
     }
-    /*paraElt.textContent = saveIt;*/
     inputElt.value = saveIt;
     console.log(saveIt);
 });
@@ -48,3 +57,5 @@ buttonCopyElt.addEventListener("click", function() {
     inputElt.select();
     document.execCommand("copy");
 });
+
+
