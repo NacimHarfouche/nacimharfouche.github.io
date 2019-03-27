@@ -1,9 +1,6 @@
 #password {
     border: white;
 }
-.checkBoxText {
-    text-decoration: line-through;
-}
 input[type="number"] {
    width: 50px;
 }

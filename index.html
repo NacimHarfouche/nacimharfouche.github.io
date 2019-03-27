@@ -12,7 +12,8 @@
 </head>
 <body>
     <header>
-       <h1>Generator of PassWord - WPA / WPA2</h1>
+       <h1>Generator of PassWord</h1>
+       <h4> Eligible WPA / WPA2</h4>
     </header>
     
     <main>
@@ -31,16 +32,20 @@
             <label for="">Password Length.</label>
             </div>
             <div>
-            <input type="checkbox" id="lowerCase" name="lowerCase"/>
+            <input type="checkbox" id="lowerCase" name="lowerCase" class="isItCheck" />
             <label for="lowerCase" >Lower Case</label>
             </div>
             <div>
-            <input type="checkbox" id="upperCase" name="upperCase"/>
+            <input type="checkbox" id="upperCase" name="upperCase" class="isItCheck" />
             <label for="upperCase" >Upper Case</label>
             </div>
             <div>
-            <input type="checkbox" id="specialChar" name="specialChar"/>
-            <label for="specialChar" class="checkBoxText">Special Characters (ON)</label>
+            <input type="checkbox" id="numberCheck" name="numberCheck" class="isItCheck"   />
+            <label for="numberCheck" >Number</label>
+            </div>
+            <div>
+            <input type="checkbox" id="specialChar" name="specialChar" class="isItCheck"  />
+            <label for="specialChar">Special Characters</label>
             </div>
             <br/>
             <button type="button" id="generate">Generate</button>
