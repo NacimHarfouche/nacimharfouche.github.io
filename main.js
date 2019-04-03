@@ -97,6 +97,9 @@ function randomNumber(tab) {
             zeroOrOne = 1;
             symbol = arrayCharAndSpe[Math.floor(Math.random() * arrayCharAndSpe.length)];
         break;
+        case "1101":
+            zeroOrOne = Math.floor(Math.random() * 2);
+            symbol = arrayCharAndSpe[Math.floor(Math.random() * arrayCharAndSpe.length)];
     }
 }
 
