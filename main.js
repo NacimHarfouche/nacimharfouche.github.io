@@ -29,7 +29,7 @@ function randomNumber(tab) {
     // true = 1
     // false = 0
     // stock number
-    let trueOrFalse = ""
+    let trueOrFalse = "";
     for (let one of checkboxElts) {
         if (one.checked) {
             trueOrFalse += 1;
@@ -100,6 +100,7 @@ function randomNumber(tab) {
         case "1101":
             zeroOrOne = Math.floor(Math.random() * 2);
             symbol = arrayCharAndSpe[Math.floor(Math.random() * arrayCharAndSpe.length)];
+            break;
     }
 }
 
