@@ -7,26 +7,32 @@
     <title>Générateur de mot de passe - WPA / WPA2</title>
     <!-- font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- css style -->
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <header>
-       <h1>PassWord Generator</h1>
+       <h1>Password Generator</h1>
        <h4> Eligible WPA / WPA2</h4>
     </header>
     
     <main>
-       <ol>
-           <li>Choose the password length.</li>
-           <li>Config the characters.</li>
-           <li>Click on the button to generate a random password.</li>
-       </ol>
-        <div>
+        <section id="instruction" class="setStyle">
+            <h3>- Instuction -</h3>
+           <ol>
+               <li>Choose the password length.</li>
+               <li>Config the characters.</li>
+               <li>Click on the button to generate a random password.</li>
+            </ol>
+        </section>
+        <div id="result">
             <input type="text" id="password" size="50" />
             <button type="button" id="copy"><i class="fas fa-copy"></i> Copy</button>
         </div>
-        <form>
+        <form class="setStyle">
+            <h3>- Configuration -</h3>
             <div>
             <input type="number" id="textinput" size="1"/>
             <label for="">Password Length.</label>
@@ -55,7 +61,7 @@
     <footer>
         <p>Created by <a href="https://github.com/NacimHarfouche">Nacim Harfouche</a></p>
     </footer>
-    <script src="main.js"></script>    
+    <script src="js/main.js"></script>    
 </body>
 
 </html>
