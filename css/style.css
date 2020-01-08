@@ -42,28 +42,6 @@ main {
 .setStyle h3 {
 	text-align: center;
 }
-#result {
-	width: 70%;
-	margin: 1rem  auto;
-}
-#password {
-    border: white;
-}
-form div {
-	margin-left: 2rem;
-}
-input[type="number"] {
-   width: 50px;
-}
-button {
-	color: #04202C;
-}
-#generate {
-	display: block;
-	margin: auto;
-/* 	margin-top: 1rem;*/	
-	margin-bottom: 1.5rem;
-}
 
 /* footer */
 footer {
