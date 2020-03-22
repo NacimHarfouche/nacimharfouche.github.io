@@ -3,20 +3,7 @@
  */
 let header = $("header");
 
-const htmlContent = {
-	en: {
-		home: "home en",
-		myProjet: "",
-		aboutMe: "",
-		contact: ""
-	},
-	fr: {
-		home: "home fr",
-		myProjet: "",
-		aboutMe: "",
-		contact: ""
-	}
-}
+
 
  /**
   * Function
@@ -60,7 +47,7 @@ buttonElt.addEventListener("click", () => {
 });
 
 // click on nav link
-$('header nav div div a').click(() => {
+$('header nav div div a').click(function()  {
 	// screen width tab or mobile
 	if ($(window).width() <= 991) {
 		$('header button').click();
@@ -69,13 +56,23 @@ $('header nav div div a').click(() => {
 	$('main').empty();
 
 	// for the EN and FR version
+	let htmlContentLanguage;
 	if (/\/en\//i.test(document.location.pathname)) {
-		console.log(htmlContent.en.home);
-		loadContentDOM(htmlContent.en.home);
+		htmlContentLanguage = htmlContent.en;
 	} else {
-		console.log(htmlContent.fr.home);
-		loadContentDOM(htmlContent.fr.home)
+		htmlContentLanguage = htmlContent.fr;
 	}
-	//$("section").addClass("rounded");
-	
+
+	switch(this.id) {
+		case "homeLink" :
+			console.log("yes");
+			loadContentDOM(htmlContentLanguage.home.section1);
+			break;
+		case "projetLink" :
+			break;
+		case "aboutLink" :
+			break;
+		case "contactLink" :
+			break;
+	}
 });
