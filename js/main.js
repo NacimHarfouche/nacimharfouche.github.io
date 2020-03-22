@@ -3,17 +3,34 @@
  */
 let header = $("header");
 
+const htmlContent = {
+	en: {
+		home: "home en",
+		myProjet: "",
+		aboutMe: "",
+		contact: ""
+	},
+	fr: {
+		home: "home fr",
+		myProjet: "",
+		aboutMe: "",
+		contact: ""
+	}
+}
+
  /**
   * Function
   */
-
+function loadContentDOM(item) {
+	$("<section>").addClass("rounded").html(item).appendTo("main");
+}
 
 /**
  * at the launch of the page
  */
 $(() => {
-	divHeader.hide().show(1300);
-	console.log(document.location.href);
+	//divHeader.hide().show(1300);
+	//console.log(document.location.href);
 });
 
 /**
@@ -53,9 +70,12 @@ $('header nav div div a').click(() => {
 
 	// for the EN and FR version
 	if (/\/en\//i.test(document.location.pathname)) {
-		console.log("en : ", document.location.pathname);
+		console.log(htmlContent.en.home);
+		loadContentDOM(htmlContent.en.home);
 	} else {
-		console.log("fr : ", document.location.pathname)
+		console.log(htmlContent.fr.home);
+		loadContentDOM(htmlContent.fr.home)
 	}
-	$("section").addClass("rounded");
+	//$("section").addClass("rounded");
+	
 });
