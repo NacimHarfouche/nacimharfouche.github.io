@@ -29,6 +29,13 @@ header nav {
 #logoSite {
 	width: 3rem;
 }
+#languageLink {
+	color: gray;
+}
+#languageLink img {
+	width: 1.8rem;
+	margin-bottom: 0.2rem;
+}
 
 /*********/
 /* main */
