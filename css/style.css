@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
+/***********/
 /* Global */
+/*********/
 * {
 	box-sizing: border-box;
 	outline: none;
@@ -20,10 +22,21 @@ header nav {
 	box-shadow: 0px 0px 2.5px black;
 	font-size: 1.6rem;
 }
-ul>li {
-	margin: 0 2rem;
+#myName {
+	font-family: "Gugi";
+	text-shadow: lightblue 0 0 2rem;
 }
-header>div {
+#logoSite {
+	width: 3rem;
+}
+
+/*********/
+/* main */
+/*******/
+main {
+	margin-top: 6.5rem;
+}
+main section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,19 +46,18 @@ header>div {
 	margin-top: 1rem;
 	box-shadow: 0px 0px 5px black;
 }
-header h1 {
+section>h1 {
+	margin: 1rem;
 	font-size: 5rem;
 	font-family: "Gugi";
-	margin: 1rem;
 	text-shadow: lightblue 0 0 2rem;
 }
-header h2 {
+section>h2 {
 	font-size: 3rem;
 	font-family: "Gugi";
 	margin: 1rem;
 }
 
-/* main */
 ul {
 	list-style: none;
 }
@@ -55,8 +67,36 @@ li {
 li:hover {
 	color: red;
 }
+#myBtnToTop {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 60px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #a79c80; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 7px 11px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 1.6rem; /* Increase font size */
+	font-weight: bold; /* Set font to bold */
+	letter-spacing: 0.6; /* space between the letters */
+	font-family: inherit; 
+}
+#myBtnToTop:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+}
 
+
+/* ul>li {
+	margin: 0 2rem;
+} */
+
+/***********/
 /* Footer */
+/*********/
 footer {
 	font-size: 1.6rem;
 }
