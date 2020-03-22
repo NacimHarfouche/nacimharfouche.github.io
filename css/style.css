@@ -14,7 +14,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background: url("../img/beige.jpg") ;
+	background: url("../img/beige.jpg") fixed;
 	font-size: 1.6rem;
 }
 /* header */
@@ -26,11 +26,19 @@ header nav {
 	font-family: "Gugi";
 	text-shadow: lightblue 0 0 2rem;
 }
+#myName:hover {
+	font-weight: bold;
+}
 #logoSite {
 	width: 3rem;
 }
 #languageLink {
 	color: gray;
+}
+#languageLink:hover {
+	color: rgba(0,0,0,.5);
+	font-weight: bold;
+	text-decoration: none;
 }
 #languageLink img {
 	width: 1.8rem;
@@ -63,6 +71,9 @@ section>h2 {
 	font-size: 3rem;
 	font-family: "Gugi";
 	margin: 1rem;
+}
+section p {
+	margin: 0 1rem 1rem;
 }
 
 ul {
