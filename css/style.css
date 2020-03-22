@@ -14,7 +14,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background: url("../img/beige.jpg") fixed;
+	background: url("../img/beige.jpg") fixed border-box no-repeat;
 	font-size: 1.6rem;
 }
 /* header */
