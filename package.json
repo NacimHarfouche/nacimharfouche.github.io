@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/0f4e90b9-a61c-4ad2-be7c-0b96b781597b/deploy-status)](https://app.netlify.com/sites/nacimharfouche/deploys)\r https://nacimharfouche.netlify.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "a": "git add --all",
+    "c": "git commit -m [auto]Improvement_to_deploy",
+    "d": "git add --all && git commit -m [auto]Improvement_to_deploy && git push -u origin master",
+    "page": "git push -u origin master:gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NacimHarfouche/nacimharfouche.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NacimHarfouche/nacimharfouche.github.io/issues"
+  },
+  "homepage": "https://github.com/NacimHarfouche/nacimharfouche.github.io#readme"
+}
