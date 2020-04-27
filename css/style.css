@@ -118,3 +118,11 @@ li:hover {
 footer {
 	font-size: 1.6rem;
 }
+
+/* Mobile */
+
+@media All and (max-width: 767px) {
+	#myBtnToTop {
+		right: 1px;
+	}
+}
