@@ -29,7 +29,6 @@ iElt.className = "fas fa-chevron-up";
 // create a button
 let buttonElt = document.createElement("button");
 buttonElt.id = "myBtnToTop";
-// buttonElt.textContent = "Top";
 
 // append the element in the DOM
 buttonElt.appendChild(iElt);
@@ -42,8 +41,10 @@ window.onscroll = () => {
 
 // When the user clicks on the button, scroll to the top of the document
 buttonElt.addEventListener("click", () => {
-	document.body.scrollTop = 0; // For Safari
-	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	//document.body.scrollTop = 0; // For Safari
+	//document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	document.body.scrollTo({ top: 0, behavior: 'smooth' }); // For Safari
+	document.documentElement.scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 });
 
 // click on nav link
@@ -52,27 +53,12 @@ $('header nav div div a').click(function()  {
 	if ($(window).width() <= 991) {
 		$('header button').click();
 	}
-	// empty main
-	$('main').empty();
 
 	// for the EN and FR version
-	let htmlContentLanguage;
-	if (/\/en\//i.test(document.location.pathname)) {
-		htmlContentLanguage = htmlContent.en;
-	} else {
-		htmlContentLanguage = htmlContent.fr;
-	}
-
-	switch(this.id) {
-		case "homeLink" :
-			console.log("yes");
-			loadContentDOM(htmlContentLanguage.home.section1);
-			break;
-		case "projetLink" :
-			break;
-		case "aboutLink" :
-			break;
-		case "contactLink" :
-			break;
-	}
+	// let htmlContentLanguage;
+	// if (/\/en\//i.test(document.location.pathname)) {
+	// 	htmlContentLanguage = htmlContent.en;
+	// } else {
+	// 	htmlContentLanguage = htmlContent.fr;
+	// }
 });

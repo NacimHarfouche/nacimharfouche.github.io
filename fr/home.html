@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Nacim Harfouche Développeur Web Full Stack">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="../img/tag.png" />
-	<!-- title page -->
-	<title>Nacim Harfouche</title>
-	<!-- normalize css -->
-	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
-	<!-- CSS style sheet -->
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<!-- font awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<!-- jquery -->
-	<script 
-		src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
-		crossorigin="anonymous">
-	</script>
-	<!-- Popper.js -->
-	<script 
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
-		crossorigin="anonymous">
-	</script>
-	<!-- Bootstrap - CSS & JS -->
-	<script 
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
-		crossorigin="anonymous">
-	</script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- JS script at the loading of the page -->
-	<script type="text/javascript" src="../js/content.js"></script>
-	<script type="text/javascript" src="../js/start.js"></script>
-</head>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Nacim Harfouche Developpeur Web Full Stack">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- preload -->
+		<link rel="preload" href="../css/normalize.css" as="style">
+		<link rel="preload" href="../css/style.css" as="style">
+		<link rel="preload" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" as="style" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" as="style" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="preload" href="../js/content.js" as="script">
+		  <link rel="preload" href="../js/start.js" as="script">
+		  <link rel="preload" href="../js/main.js" as="script">
+		  <!-- favicon -->
+		<link rel="shortcut icon" type="image/png" href="../img/tag.png" />
+		<!-- title page -->
+		<title>Nacim Harfouche</title>
+		<!-- normalize css -->
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<!-- CSS style sheet -->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- JS scripts at the loading of the page -->
+		<script type="text/javascript" src="../js/content.js"></script>
+		<script type="text/javascript" src="../js/start.js"></script>
+	</head>
+
 <body>
+	<!-- begin header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand" href="#" id="myName"><img src="../img/tag.png" alt="logo site" id="logoSite" loading="lazy" /> Nacim Harfouche</a>
+			<a class="navbar-brand" href="#" id="myName"><img src="../img/tag.png" alt="logo du site" id="logoSite" loading="lazy" /> Nacim Harfouche</a>
 			<div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
 				<div class="navbar-nav justify-content-between">
-					<a class="nav-item nav-link" id="homeLink" href="#">Accueil</a>
-					<a class="nav-item nav-link" id="projetLink" href="#">Mes projets</a>
-					<a class="nav-item nav-link" id="aboutLink" href="#">A propos de Moi</a>
-					<a class="nav-item nav-link" id="contactLink" href="#">Contact</a>
+					<a class="nav-item nav-link" id="homeLink" href="#home">Accueil</a>
+					<a class="nav-item nav-link" id="projetLink" href="#projet">Mes projets</a>
+					<a class="nav-item nav-link" id="aboutLink" href="#about">A propos de Moi</a>
+					<a class="nav-item nav-link" id="contactLink" href="#contact">Contact</a>
 				</div>
 			</div>
 			<a href="../en/home.html" id="languageLink"><img src="../img/USFlag.png" alt="drapeau américain" loading="lazy" /> EN</a>
 		</nav>
 	</header>
+	<!-- end header -->
 	
+	<!-- begin main -->
 	<main>
 		<section class="rounded">
 			<h1>Nacim Harfouche</h1>
@@ -107,18 +103,26 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Iaculis eu non diam phasellus vestibulum. Elit sed vulputate mi sit amet. Diam phasellus vestibulum lorem sed risus. Morbi quis commodo odio aenean sed adipiscing. Elit sed vulputate mi sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
 		</section>
 	</main>
+	<!-- end main -->
 	
-	<!-- <footer class="fixed-bottom"> -->
+	<!-- begin footer -->
 	<footer>
 		<p class="text-center">
-			© 2019, Created by 
+			© 2019, Créé par 
 			<a href="https://github.com/NacimHarfouche" target="_blank" rel="noopener noreferrer">Nacim Harfouche</a>
             <a href="https://twitter.com/ArtesEveni" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
 			<a href="https://www.linkedin.com/in/nacim-harfouche-912b14125/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
 		</p>
 	</footer>
+	<!-- end footer -->
 	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
+	<!-- si le navigateur de l'utilisateur ne supporte pas Javascript -->
 	<noscript>Votre navigateur ne supporte pas JavaScript!</noscript>
 </body>
 </html>
