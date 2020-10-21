@@ -3,7 +3,7 @@
 /**
  * at the launch of the page
  */
-$(() => {
+(() => {
     let linkBlanks = document.querySelectorAll('a[target*=blank]');
     if (linkBlanks.length === 0) return;
     for (let link of linkBlanks ) {

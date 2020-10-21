@@ -4,7 +4,6 @@
 let header = $("header");
 
 
-
  /**
   * Function
   */
@@ -16,7 +15,7 @@ function loadContentDOM(item) {
  * at the launch of the page
  */
 $(() => {
-	divHeader.hide().show(1300);
+	//divHeader.hide().show(1300);
 	//console.log(document.location.href);
 });
 
