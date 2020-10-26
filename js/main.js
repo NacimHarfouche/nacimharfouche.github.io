@@ -61,3 +61,36 @@ $('header nav div div a').click(function()  {
 	// 	htmlContentLanguage = htmlContent.fr;
 	// }
 });
+
+
+// ----------------------------------------------------------------------------------------
+
+// $("*").each( function () {
+//     var $this = $(this);
+//     console.log($this)
+//     if (parseInt($this.css("fontSize")) < 12) {
+//         $this.css({ "font-size": "12px" });   
+//     }
+// });
+
+// to set all elements to a minimal font size of 12px
+var elements = document.querySelectorAll("*");
+// for (let element of elements) {
+// 	let EltFontSize = element.computedStyleMap().get('font-size').value;
+// 	console.log(EltFontSize)
+// 	console.log(getComputedStyle(element)["fontSize"].replace(/px/gi, ""))
+// 	if (EltFontSize < 12) {
+// 		element.style.fontSize = "0";
+// 		element.style.fontSize = "1.2rem";
+// 	}
+// }
+// console.log("end")
+
+// for (let element of elements) {
+// 	let EltFontSize = element.computedStyleMap().get('font-size').value;
+// 	if (EltFontSize < 12) {
+// 		console.log(element, EltFontSize)
+// 	}
+// }
+
+//-----------------------------------------------------------------------------------------------

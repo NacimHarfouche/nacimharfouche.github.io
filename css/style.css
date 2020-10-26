@@ -32,9 +32,6 @@ header nav {
 #logoSite {
 	width: 3rem;
 }
-#languageLink {
-	color: gray;
-}
 #languageLink:hover {
 	color: rgba(0,0,0,.5);
 	font-weight: bold;
@@ -43,6 +40,15 @@ header nav {
 #languageLink img {
 	width: 1.8rem;
 	margin-bottom: 0.2rem;
+}
+header>div>div>a.nav-item {
+	color: #595959!important;
+}
+#homeLink, #projetLink, #aboutLink, #contactLink, #languageLink {
+	color: #595959!important;
+}
+#homeLink:hover, #projetLink:hover, #aboutLink:hover, #contactLink:hover, #languageLink:hover {
+	color: black!important;
 }
 
 /*********/
@@ -106,6 +112,9 @@ li:hover {
 #myBtnToTop:hover {
 	background-color: #555; /* Add a dark-grey background on hover */
 }
+.myEmail {
+	color: black;
+}
 
 
 /* ul>li {
@@ -123,6 +132,9 @@ footer {
 /* Mobile */
 
 @media All and (max-width: 767px) {
+	/* * {
+		font-size: min(12px);
+	} */
 	#myBtnToTop {
 		right: 1px;
 	}
