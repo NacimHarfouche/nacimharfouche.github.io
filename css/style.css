@@ -31,14 +31,15 @@ header nav {
 }
 #logoSite {
 	width: 3rem;
+	height: auto;
 }
 #languageLink:hover {
-	color: rgba(0,0,0,.5);
 	font-weight: bold;
 	text-decoration: none;
 }
 #languageLink img {
 	width: 1.8rem;
+	height: auto;
 	margin-bottom: 0.2rem;
 }
 header>div>div>a.nav-item {

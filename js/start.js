@@ -12,8 +12,3 @@
         if (link.rel[0] === " ") link.rel = link.rel.slice(1);
     }
 });
-
-
-
-// let allElts = document.querySelector("*");
-// console.log(allElts)
