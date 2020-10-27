@@ -55,13 +55,12 @@ $('header nav div div a').click(function()  {
 
 // ----------------------------------------------------------------------------------------
 
-$("*").each( function () {
-    var $this = $(this);
-    console.log($this)
-    if (parseInt($this.css("fontSize")) < 12) {
-        $this.css({ "font-size": "12px" });   
-    }
-});
+// $("*").each( function () {
+//     var $this = $(this);
+//     if (parseInt($this.css("fontSize")) < 12) {
+//         $this.css({ "font-size": "12px" });   
+//     }
+// });
 
 // to set all elements to a minimal font size of 12px
 // var elements = document.querySelectorAll("*");
