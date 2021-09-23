@@ -81,6 +81,7 @@ section>h2 {
 }
 section p {
 	margin: 0 1rem 1rem;
+	font-size: 1.3rem;
 }
 
 ul {
@@ -136,6 +137,9 @@ footer {
 	/* * {
 		font-size: min(12px);
 	} */
+	section>h1 {
+		text-align: center;
+	}
 	#myBtnToTop {
 		right: 1px;
 	}

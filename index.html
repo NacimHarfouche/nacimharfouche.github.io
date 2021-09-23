@@ -12,7 +12,18 @@
 </head>
 <body>
     <script>
-        document.location.href = "./en/home.html";
+        // document.location.href = "./en/home.html";
+        const language = window.navigator.userLanguage || window.navigator.language;
+        if (language.slice(0,2) == "fr") {
+            document.location.href = "./fr/home.html";
+        } else {
+            document.location.href = "./en/home.html";
+        }
+        // ungly way
+        // document.location.href = (window.navigator.userLanguage || window.navigator.language).slice(0,2) == "fr" ? "./fr/home.html" : "./en/home.html"; 
+
+        // more ugly
+        // document.location.href = `./${(window.navigator.userLanguage || window.navigator.language).slice(0,2) == "fr" ? "fr" : "en"}/home.html`; 
     </script>
 </body>
 </html>
