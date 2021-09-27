@@ -117,6 +117,35 @@ li:hover {
 .myEmail {
 	color: black;
 }
+/* list of projects */
+.listProjects {
+	list-style: none;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding-bottom: 1.5rem;
+}
+
+.imgMiniature {
+	width: 15rem;
+	transition-property: width,height;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+	box-shadow: 2px 2px 5px black ;
+	border-radius: 5px;
+}
+
+.imgMiniature:hover, .imgMiniature:focus {
+	width: 25rem;
+	z-index: 100;
+	box-shadow: none;
+}
+
+.imgMiniature:active {
+	box-shadow: none;
+}
 
 
 /* ul>li {
@@ -142,5 +171,24 @@ footer {
 	}
 	#myBtnToTop {
 		right: 1px;
+	}
+	/* list projects */
+	.listProjects {
+		flex-direction: column;
+		align-items: center;
+		padding: 0;
+	}
+	.imgMiniature {
+		width: 40rem;
+		margin-bottom: 1rem;
+		transition-property: none;
+	}
+	.imgMiniature:hover, .imgMiniature:focus {
+		width: 40rem;
+		z-index: 100;
+		box-shadow: none;
+	}
+	.imgMiniaturea:visited {
+		box-shadow: 2px 2px 5px black ;
 	}
 }
