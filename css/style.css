@@ -130,6 +130,7 @@ li:hover {
 
 .imgMiniature {
 	width: 15rem;
+	height: auto;
 	transition-property: width,height;
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
