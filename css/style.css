@@ -180,12 +180,12 @@ footer {
 		padding: 0;
 	}
 	.imgMiniature {
-		width: 40rem;
+		width: 30rem;
 		margin-bottom: 1rem;
 		transition-property: none;
 	}
 	.imgMiniature:hover, .imgMiniature:focus {
-		width: 40rem;
+		width: 30rem;
 		z-index: 100;
 		box-shadow: none;
 	}
