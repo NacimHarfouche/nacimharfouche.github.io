@@ -186,7 +186,6 @@ footer {
 	}
 	.imgMiniature:hover, .imgMiniature:focus {
 		width: 30rem;
-		z-index: 100;
 		box-shadow: none;
 	}
 	.imgMiniaturea:visited {
