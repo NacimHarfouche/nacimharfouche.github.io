@@ -25,9 +25,11 @@ function loadContentDOM(item) {
 // create i element
 let iElt = document.createElement("i");
 iElt.className = "fas fa-chevron-up";
+iElt.ariaHidden = "true";
 // create a button element
 let buttonElt = document.createElement("button");
 buttonElt.id = "myBtnToTop";
+buttonElt.ariaLabel = "to go up";
 
 // append the element in the DOM
 buttonElt.appendChild(iElt);
