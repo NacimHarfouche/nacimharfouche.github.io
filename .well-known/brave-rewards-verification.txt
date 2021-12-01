@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: nacimharfouche.github.io
+Token: 3c99f8c5f9b90217dcc04984f1078981f50c20fc4a6ae1ee2c01fe26a6575639
