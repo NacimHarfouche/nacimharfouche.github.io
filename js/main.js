@@ -2,6 +2,8 @@
  * Variable
  */
 // let header = $("header");
+let aInNavElt = document.querySelector("header nav div div a");
+let buttonHeaderElt = document.querySelector("header button");
 
 
  /**
@@ -47,10 +49,19 @@ buttonElt.addEventListener("click", () => {
 });
 
 // click on nav link
-$('header nav div div a').click(function()  {
+// $('header nav div div a').click(function()  {
+// 	// screen width tab or mobile
+// 	if ($(window).width() <= 991) {
+// 		$('header button').click();
+// 	}
+// });
+
+// without Jquery
+// click on nav link
+aInNavElt.addEventListener("click", function() {
 	// screen width tab or mobile
-	if ($(window).width() <= 991) {
-		$('header button').click();
+	if (window.screen.width <= 991) {
+		buttonHeaderElt.click();
 	}
 });
 
