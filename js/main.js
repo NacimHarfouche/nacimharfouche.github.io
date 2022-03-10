@@ -1,15 +1,15 @@
 /**
  * Variable
  */
-let header = $("header");
+// let header = $("header");
 
 
  /**
   * Function
   */
-function loadContentDOM(item) {
-	$("<section>").addClass("rounded").html(item).appendTo("main");
-}
+// function loadContentDOM(item) {
+// 	$("<section>").addClass("rounded").html(item).appendTo("main");
+// }
 
 /**
  * at the launch of the page
