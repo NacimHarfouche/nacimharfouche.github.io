@@ -1,29 +1,34 @@
-/**
+/*****************************
  * Variable
- */
+ *****************************/
 // let header = $("header");
 let aInNavElt = document.querySelectorAll("header nav div div a");
 let buttonHeaderElt = document.querySelector("header button");
+// create a year variable
+let year = new Date().getFullYear();
+// get the span year in the footer
+let footerSpanYearElt = document.getElementById("year");
 
 
- /**
+ /****************************
   * Function
-  */
+  ****************************/
 // function loadContentDOM(item) {
 // 	$("<section>").addClass("rounded").html(item).appendTo("main");
 // }
 
-/**
+/****************************
  * at the launch of the page
- */
+ ****************************/
 (() => {
 	//divHeader.hide().show(1300);
 	//console.log(document.location.href);
 });
 
-/**
- * button to go to the top
- */
+// add the current year in the footer
+footerSpanYearElt.textContent = ""+ year;
+
+// **buttton to go to the top**
 // create i element
 let iElt = document.createElement("i");
 iElt.className = "fas fa-chevron-up";
@@ -47,14 +52,6 @@ buttonElt.addEventListener("click", () => {
 	document.body.scrollTo({ top: 0, behavior: 'smooth' }); // For Safari
 	document.documentElement.scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 });
-
-// click on nav link
-// $('header nav div div a').click(function()  {
-// 	// screen width tab or mobile
-// 	if ($(window).width() <= 991) {
-// 		$('header button').click();
-// 	}
-// });
 
 // without Jquery
 // click on nav link to close it
