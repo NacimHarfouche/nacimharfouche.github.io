@@ -7,10 +7,21 @@
 	<meta name="description" content="Nacim Harfouche Full Stack Web Developer">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="./img/tag.png" />
     <!-- title page -->
     <title>Nacim Harfouche</title>
 </head>
 <body>
+    <!-- begin header -->
+    <header>
+        <nav>
+            <!-- link to go to the profolio manually in case -->
+            <a href="./en/home.html">Go to the portfolio</a>
+        </nav>
+    </header>
+    <!-- end header -->
+
     <script>
         // document.location.href = "./en/home.html";
         const language = window.navigator.userLanguage || window.navigator.language;
@@ -25,5 +36,8 @@
         // more ugly
         // document.location.href = `./${(window.navigator.userLanguage || window.navigator.language).slice(0,2) == "fr" ? "fr" : "en"}/home.html`; 
     </script>
+    
+    <!-- if javascript is not supported on the user browser -->
+	<noscript>Your browser does not support JavaScript!</noscript>
 </body>
 </html>
