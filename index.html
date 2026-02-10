@@ -1,46 +1,246 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
-	<meta charset="UTF-8">
-	<meta name="description" content="Nacim Harfouche Full Stack Web Developer">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="Nacim Harfouche Full Stack Web Developer">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nacim Harfouche — Web Developer">
+    <meta property="og:description" content="Portfolio de Nacim Harfouche, développeur web full stack.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nacimharfouche.github.io/">
+    <meta property="og:image" content="https://nacimharfouche.github.io/img/tag.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nacimharfouche">
+    <meta name="twitter:title" content="Nacim Harfouche — Web Developer">
+    <meta name="twitter:description" content="Portfolio de Nacim Harfouche, développeur web full stack.">
+    <meta name="twitter:image" content="https://nacimharfouche.github.io/img/tag.png">
+    <!-- preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
+        crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style"
+        crossorigin="anonymous">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="js/i18n.js" as="script">
     <!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="./img/tag.png" />
+    <link rel="shortcut icon" type="image/png" href="img/tag.png" />
     <!-- title page -->
     <title>Nacim Harfouche</title>
+    <!-- normalize css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <!-- Security: noopener noreferrer on external links (defer = runs after DOM parsed) -->
+    <script type="text/javascript" src="js/start.js" defer></script>
 </head>
+
 <body>
     <!-- begin header -->
     <header>
-        <nav>
-            <!-- link to go to the profolio manually in case -->
-            <!-- <a href="./en/home.html">Go to the portfolio</a> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#" id="myName"><img src="img/tag.png" data-i18n-alt="logo.alt"
+                    alt="logo of the site" id="logoSite" loading="lazy" /> Nacim Harfouche</a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav justify-content-between">
+                    <a class="nav-item nav-link" id="homeLink" href="#home" data-i18n="nav.home">Home</a>
+                    <a class="nav-item nav-link" id="projetLink" href="#projet" data-i18n="nav.projects">Projects</a>
+                    <a class="nav-item nav-link" id="aboutLink" href="#about" data-i18n="nav.about">About Me</a>
+                    <a class="nav-item nav-link" id="contactLink" href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+            <a href="#" id="languageLink"><img data-i18n-src="nav.langFlag" data-i18n-alt="nav.langFlagAlt"
+                    src="img/frenchFlag.png" alt="french flag" loading="lazy" /> <span
+                    data-i18n="nav.langLabel">FR</span></a>
         </nav>
     </header>
     <!-- end header -->
 
-    <script>
-        // document.location.href = "./en/home.html";
-        const language = window.navigator.userLanguage || window.navigator.language;
-        if (language.slice(0,2) == "fr") {
-            document.location.href = "./fr/home.html";
-        } else {
-            document.location.href = "./en/home.html";
-        }
-        // ungly way
-        // document.location.href = (window.navigator.userLanguage || window.navigator.language).slice(0,2) == "fr" ? "./fr/home.html" : "./en/home.html"; 
+    <!-- begin main -->
+    <main>
+        <section class="rounded">
+            <h1>Nacim Harfouche</h1>
+            <h2 data-i18n="hero.subtitle">Web Developer</h2>
+        </section>
+        <section class="rounded">
+            <h2 id="home" data-i18n="home.title">Home</h2>
+            <p data-i18n="home.text">Welcome, I'm a french full stack web developer, passionate about the realization
+                and development of web projects, I turned towards a career as a web developer in 2018. I joined the 3W
+                Academy where I completed a developer integrator training in the realization of web applications (back &
+                front ) that I validated in April 2019.</p>
+        </section>
+        <section class="rounded">
+            <h2 id="projet" data-i18n="projects.title">Projects</h2>
+            <ul class="listProjects">
+                <li>
+                    <a href="https://trainandperform.netlify.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature train and perform web page"
+                            src="img/miniature/train_and_perform.png" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/green-office/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature green office web page"
+                            src="img/miniature/green_office.png" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/fish_chips/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature fish chips web page" src="img/miniature/fish_chips.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/ila_yoga/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature ila yoga web page" src="img/miniature/ila_yoga.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/realty_group/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature realty group web page"
+                            src="img/miniature/realty_group.png" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/creasoul/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature creasoul web page" src="img/miniature/creasoul.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/wolf_gang/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature wolf gang web page" src="img/miniature/wolf_gang.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/john_doe_porfolio/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature portfolio web page" src="img/miniature/portfolio.jpg"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/mindgeek/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature mindgeek web page" src="img/miniature/mindgeek.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/cup_of_tea/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature cup of tea web page" src="img/miniature/cup_of_tea.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/passwordGenerator/"
+                        data-i18n-href="project.passwordGenerator.url" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature passwordGenerator web page"
+                            src="img/miniature/passwordGenerator.png" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/calculator/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature calculator web page" src="img/miniature/calculator.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/todolist_ts/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature todolist web page" src="img/miniature/todolist.jpg"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/carousel/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature carousel web page" src="img/miniature/carousel.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/verify_ean/index.html"
+                        data-i18n-href="project.verifyEan.url" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature verify ean web page" src="img/miniature/verify_ean.png"
+                            loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nacimharfouche.github.io/select_image/" target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="miniature select image web page"
+                            src="img/miniature/select_image.png" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="rounded">
+            <h2 id="about" data-i18n="about.title">About me</h2>
+            <p class="aboutStatus"><i class="fas fa-tools"></i> <span data-i18n="about.status">in progress...</span></p>
+            <p data-i18n="about.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet
+                consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim
+                lobortis scelerisque fermentum dui faucibus in. Iaculis eu non diam phasellus vestibulum. Elit sed
+                vulputate mi sit amet. Diam phasellus vestibulum lorem sed risus. Morbi quis commodo odio aenean sed
+                adipiscing. Elit sed vulputate mi sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+                Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+            <p data-i18n="about.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet
+                consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim
+                lobortis scelerisque fermentum dui faucibus in. Iaculis eu non diam phasellus vestibulum. Elit sed
+                vulputate mi sit amet. Diam phasellus vestibulum lorem sed risus. Morbi quis commodo odio aenean sed
+                adipiscing. Elit sed vulputate mi sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+                Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+        </section>
+        <section class="rounded">
+            <h2 id="contact" data-i18n="contact.title">Contact</h2>
+            <p><a class="myEmail" href="mailto:nacim_4@hotmail.fr" aria-label="email"><i class="fas fa-envelope"></i>
+                    nacim_4@hotmail.fr</a></p>
+        </section>
+    </main>
+    <!-- end main -->
 
-        // more ugly
-        // document.location.href = `./${(window.navigator.userLanguage || window.navigator.language).slice(0,2) == "fr" ? "fr" : "en"}/home.html`; 
-    </script>
-    
+    <!-- begin footer -->
+    <footer>
+        <p class="text-center">
+            © 2019-<span id="year"></span>, <span data-i18n="footer.createdBy">Created by</span>
+            <a href="https://github.com/NacimHarfouche" target="_blank" rel="noopener noreferrer"
+                aria-label="Github">Nacim Harfouche</a>
+            <a href="https://twitter.com/ArtesEveni" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/nacim-harfouche-912b14125/" target="_blank" rel="noopener noreferrer"
+                aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/NacimHarfouche" target="_blank" rel="noopener noreferrer" aria-label="Github"><i
+                    class="fab fa-github"></i></a>
+        </p>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- i18n system -->
+    <script type="text/javascript" src="js/i18n.js"></script>
     <!-- if javascript is not supported on the user browser -->
-	<noscript>
-        Your browser does not support JavaScript! 
-        <a href="./en/home.html">Go to the portfolio</a>
-    </noscript>
+    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
+
 </html>

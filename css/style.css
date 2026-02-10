@@ -7,49 +7,72 @@
 /*********/
 * {
 	box-sizing: border-box;
-	outline: none;
 	text-decoration: none;
 }
+
 html {
 	font-size: 62.5%;
 }
+
 body {
 	background: url("../img/beige.jpg") fixed border-box no-repeat;
 	font-size: 1.6rem;
 }
+
 /* header */
 header nav {
 	box-shadow: 0px 0px 2.5px black;
 	font-size: 1.6rem;
 }
+
 #myName {
 	font-family: "Gugi";
 	text-shadow: lightblue 0 0 2rem;
 }
+
 #myName:hover {
 	font-weight: bold;
 }
+
 #logoSite {
 	width: 3rem;
 	height: auto;
 }
-#languageLink:hover {
-	font-weight: bold;
+
+#languageLink {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.4rem 0.8rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, border-color 0.3s;
 	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 500;
 }
+
+#languageLink:hover {
+	background-color: #f0f0f0;
+	border-color: #999;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 #languageLink img {
 	width: 1.8rem;
 	height: auto;
-	margin-bottom: 0.2rem;
 }
-header>div>div>a.nav-item {
-	color: #595959!important;
+
+.navbar .nav-item.nav-link,
+#languageLink {
+	color: #595959;
 }
-#homeLink, #projetLink, #aboutLink, #contactLink, #languageLink {
-	color: #595959!important;
-}
-#homeLink:hover, #projetLink:hover, #aboutLink:hover, #contactLink:hover, #languageLink:hover {
-	color: black!important;
+
+.navbar .nav-item.nav-link:hover,
+#languageLink:hover {
+	color: black;
 }
 
 /*********/
@@ -58,6 +81,7 @@ header>div>div>a.nav-item {
 main {
 	margin-top: 6.5rem;
 }
+
 main section {
 	display: flex;
 	flex-direction: column;
@@ -68,55 +92,85 @@ main section {
 	margin-top: 1rem;
 	box-shadow: 0px 0px 5px black;
 }
+
 section>h1 {
 	margin: 1rem;
 	font-size: 5rem;
 	font-family: "Gugi";
 	text-shadow: lightblue 0 0 2rem;
 }
+
 section>h2 {
 	font-size: 3rem;
 	font-family: "Gugi";
 	margin: 1rem;
 }
+
 section p {
 	margin: 0 1rem 1rem;
 	font-size: 1.3rem;
 }
 
+.aboutStatus {
+	font-size: 2rem !important;
+	text-align: center;
+}
+
 ul {
 	list-style: none;
 }
+
 li {
 	font-size: 2rem;
 }
+
 li:hover {
 	color: red;
 }
+
 #myBtnToTop {
-	display: none; /* Hidden by default */
-	position: fixed; /* Fixed/sticky position */
-	bottom: 60px; /* Place the button at the bottom of the page */
-	right: 30px; /* Place the button 30px from the right */
-	z-index: 99; /* Make sure it does not overlap */
-	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: #a79c80; /* Set a background color */
-	color: white; /* Text color */
-	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 7px 11px; /* Some padding */
-	border-radius: 10px; /* Rounded corners */
-	font-size: 1.6rem; /* Increase font size */
-	font-weight: bold; /* Set font to bold */
-	letter-spacing: 0.6; /* space between the letters */
-	font-family: inherit; 
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Fixed/sticky position */
+	bottom: 60px;
+	/* Place the button at the bottom of the page */
+	right: 30px;
+	/* Place the button 30px from the right */
+	z-index: 99;
+	/* Make sure it does not overlap */
+	border: none;
+	/* Remove borders */
+	outline: none;
+	/* Remove outline */
+	background-color: #a79c80;
+	/* Set a background color */
+	color: white;
+	/* Text color */
+	cursor: pointer;
+	/* Add a mouse pointer on hover */
+	padding: 7px 11px;
+	/* Some padding */
+	border-radius: 10px;
+	/* Rounded corners */
+	font-size: 1.6rem;
+	/* Increase font size */
+	font-weight: bold;
+	/* Set font to bold */
+	letter-spacing: 0.6px;
+	/* space between the letters */
+	font-family: inherit;
 }
+
 #myBtnToTop:hover {
-	background-color: #555; /* Add a dark-grey background on hover */
+	background-color: #555;
+	/* Add a dark-grey background on hover */
 }
+
 .myEmail {
 	color: black;
 }
+
 /* list of projects */
 .listProjects {
 	list-style: none;
@@ -131,14 +185,15 @@ li:hover {
 .imgMiniature {
 	width: 15rem;
 	height: auto;
-	transition-property: width,height;
+	transition-property: width, height;
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
-	box-shadow: 2px 2px 5px black ;
+	box-shadow: 2px 2px 5px black;
 	border-radius: 5px;
 }
 
-.imgMiniature:hover, .imgMiniature:focus {
+.imgMiniature:hover,
+.imgMiniature:focus {
 	width: 25rem;
 	z-index: 100;
 	box-shadow: none;
@@ -164,31 +219,38 @@ footer {
 /* Mobile */
 
 @media All and (max-width: 767px) {
+
 	/* * {
 		font-size: min(12px);
 	} */
 	section>h1 {
 		text-align: center;
 	}
+
 	#myBtnToTop {
 		right: 1px;
 	}
+
 	/* list projects */
 	.listProjects {
 		flex-direction: column;
 		align-items: center;
 		padding: 0;
 	}
+
 	.imgMiniature {
 		width: 30rem;
 		margin-bottom: 1rem;
 		transition-property: none;
 	}
-	.imgMiniature:hover, .imgMiniature:focus {
+
+	.imgMiniature:hover,
+	.imgMiniature:focus {
 		width: 30rem;
 		box-shadow: none;
 	}
-	.imgMiniaturea:visited {
-		box-shadow: 2px 2px 5px black ;
+
+	.imgMiniature:visited {
+		box-shadow: 2px 2px 5px black;
 	}
 }
