@@ -33,3 +33,28 @@ jobs:
             lang/en.json
             lang/fr.json
             css/style.css
+
+  local-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # lychee reads JS and JSON as plain text and only finds absolute URLs,
+      # so relative paths written there (the language flag) are checked here.
+      # A path is a quoted string ending in a file extension, without ":" (URLs
+      # stay with lychee). It resolves from the repository root, like index.html.
+      - name: Check local paths in JS and JSON
+        run: |
+          found=0
+          missing=0
+          while IFS=: read -r file line path; do
+            found=$((found + 1))
+            if [ ! -f "${path#/}" ]; then
+              echo "::error file=$file,line=$line::$path not found"
+              missing=$((missing + 1))
+            fi
+          done < <(grep -noE "[\"'][^\"':]+\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)[\"']" js/*.js lang/*.json | tr -d "\"'")
+          echo "$found local paths checked, $missing missing"
+          # Never pass without checking anything: the pattern would be out of date.
+          [ "$found" -gt 0 ] || { echo "::error::no local path found in js/*.js or lang/*.json"; exit 1; }
+          [ "$missing" -eq 0 ]
