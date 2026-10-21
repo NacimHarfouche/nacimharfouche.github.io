@@ -1,0 +1,19 @@
+# Link checker configuration (issue #9), read by .github/workflows/links.yml.
+# The files to check and the root directory are passed by the workflow.
+
+# Also check in-page anchors (#home, #projet...).
+include_fragments = "anchor-only"
+
+exclude = [
+  # LinkedIn answers 999 to every robot (seen in PR #8): check it by hand.
+  '^https://(www\.)?linkedin\.com/',
+]
+
+remap = [
+  # GitHub builds the #readme anchor with JavaScript, so lychee never finds it:
+  # check the repository page without the anchor.
+  '^(https://github\.com/[^#]+)#readme$ $1',
+]
+
+# twitter.com and x.com are excluded by lychee's own defaults (they block
+# robots). The footer link redirects twitter.com -> x.com (301): check it by hand.
