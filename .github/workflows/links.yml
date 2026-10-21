@@ -41,20 +41,33 @@ jobs:
 
       # lychee reads JS and JSON as plain text and only finds absolute URLs,
       # so relative paths written there (the language flag) are checked here.
-      # A path is a quoted string ending in a file extension, without ":" (URLs
-      # stay with lychee). It resolves from the repository root, like index.html.
+      # A path is one quoted string with a "/", no space and no ":" (URLs stay
+      # with lychee), ending in a file extension. Paths built at runtime
+      # ("img/" + name, template literals) are not seen.
+      # The browser resolves them against the page that loads the script: the
+      # only one is index.html, at the root, so they are checked from the root.
       - name: Check local paths in JS and JSON
         run: |
+          mapfile -t files < <(git ls-files '*.js' '*.json' ':(exclude)package.json')
+          chars="[^\"'[:space:]:]"
+          ext="\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)"
+          pattern="\"$chars+/$chars*$ext\"|'$chars+/$chars*$ext'"
+          status=0
+          matches=$(grep -noE "$pattern" "${files[@]}" | tr -d "\"'") || status=$?
+          # grep exits 1 when nothing matches, 2 on a real error.
+          [ "$status" -le 1 ] || { echo "::error::grep failed (exit $status)"; exit 1; }
           found=0
           missing=0
-          while IFS=: read -r file line path; do
-            found=$((found + 1))
-            if [ ! -f "${path#/}" ]; then
-              echo "::error file=$file,line=$line::$path not found"
-              missing=$((missing + 1))
-            fi
-          done < <(grep -noE "[\"'][^\"':]+\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)[\"']" js/*.js lang/*.json | tr -d "\"'")
-          echo "$found local paths checked, $missing missing"
+          if [ -n "$matches" ]; then
+            while IFS=: read -r file line path; do
+              found=$((found + 1))
+              if [ ! -f "${path#/}" ]; then
+                echo "::error file=$file,line=$line::$path not found"
+                missing=$((missing + 1))
+              fi
+            done <<< "$matches"
+          fi
+          echo "$found local paths checked in ${#files[@]} files, $missing missing"
           # Never pass without checking anything: the pattern would be out of date.
-          [ "$found" -gt 0 ] || { echo "::error::no local path found in js/*.js or lang/*.json"; exit 1; }
+          [ "$found" -gt 0 ] || { echo "::error::no local path found in JS or JSON files"; exit 1; }
           [ "$missing" -eq 0 ]
