@@ -42,18 +42,22 @@ jobs:
       # lychee reads JS and JSON as plain text and only finds absolute URLs,
       # so relative paths written there (the language flag) are checked here.
       # A path is one quoted string with a "/", no space and no ":" (URLs stay
-      # with lychee), ending in a file extension. Paths built at runtime
-      # ("img/" + name, template literals) are not seen.
+      # with lychee), ending in one of the lowercase extensions listed in ext.
+      # Paths built at runtime ("img/" + name, template literals) are not seen.
       # The browser resolves them against the page that loads the script: the
       # only one is index.html, at the root, so they are checked from the root.
       - name: Check local paths in JS and JSON
+        # Without it the step runs as "bash -e", without pipefail, and grep's
+        # exit status would be lost in the pipe to tr.
+        shell: bash
         run: |
           mapfile -t files < <(git ls-files '*.js' '*.json' ':(exclude)package.json')
           chars="[^\"'[:space:]:]"
           ext="\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)"
           pattern="\"$chars+/$chars*$ext\"|'$chars+/$chars*$ext'"
           status=0
-          matches=$(grep -noE "$pattern" "${files[@]}" | tr -d "\"'") || status=$?
+          # -H keeps the file name even when there is a single file.
+          matches=$(grep -HnoE "$pattern" "${files[@]}" | tr -d "\"'") || status=$?
           # grep exits 1 when nothing matches, 2 on a real error.
           [ "$status" -le 1 ] || { echo "::error::grep failed (exit $status)"; exit 1; }
           found=0
