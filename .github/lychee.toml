@@ -15,5 +15,5 @@ remap = [
   '^(https://github\.com/[^#]+)#readme$ $1',
 ]
 
-# twitter.com and x.com are excluded by lychee's own defaults (they block
-# robots). The footer link redirects twitter.com -> x.com (301): check it by hand.
+# twitter.com is excluded by lychee's own defaults, so the footer link is never
+# checked here. It redirects to x.com (301), which answers 200: check it by hand.
