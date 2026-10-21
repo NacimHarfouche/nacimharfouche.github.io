@@ -17,5 +17,3 @@ Will run `git add --all && git commit -m [auto]Improvement_to_deploy && git push
 
 ### `npm run page`
 Will run `git push -u origin master:gh-pages` to push on github page
-
-[contre-test](https://nacimharfouche.github.io/nexistepas/) [contre-test local](img/absent.png)
