@@ -37,7 +37,8 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- CSS style sheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- font awesome: icons are all below the fold, so it loads without blocking the first render -->
+    <!-- font awesome: no icon is visible on first render (the back-to-top arrow only shows after scrolling),
+        so it loads without blocking it -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
@@ -63,7 +64,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#" id="myName"><img src="img/logo-90.webp" data-i18n-alt="logo.alt"
-                    alt="logo of the site" id="logoSite" width="90" height="67" /> Nacim Harfouche</a>
+                    alt="logo of the site" id="logoSite" width="90" height="67" fetchpriority="high" /> Nacim Harfouche</a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav justify-content-between">
                     <a class="nav-item nav-link" id="homeLink" href="#home" data-i18n="nav.home">Home</a>
