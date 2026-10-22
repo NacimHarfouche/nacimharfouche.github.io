@@ -22,28 +22,33 @@
     <meta name="twitter:title" content="Nacim Harfouche — Web Developer">
     <meta name="twitter:description" content="Portfolio de Nacim Harfouche, développeur web full stack.">
     <meta name="twitter:image" content="https://nacimharfouche.github.io/img/tag.png">
-    <!-- preload -->
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
-        crossorigin="anonymous">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style"
-        crossorigin="anonymous">
-    <link rel="preload" href="js/main.js" as="script">
-    <link rel="preload" href="js/i18n.js" as="script">
+    <!-- CDN connections opened early -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- title font, discovered late through style.css otherwise -->
+    <link rel="preload" href="fonts/gugi-latin.woff2" as="font" type="font/woff2" crossorigin>
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="img/tag.png" />
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <!-- title page -->
     <title>Nacim Harfouche</title>
     <!-- normalize css -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- CSS style sheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
+    <!-- font awesome: icons are all below the fold, so it loads without blocking the first render -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </noscript>
+    <!-- Bootstrap CSS: stays render-blocking, the navbar layout depends on it -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
     <!-- Security: noopener noreferrer on external links (defer = runs after DOM parsed) -->
     <script type="text/javascript" src="js/start.js" defer></script>
@@ -57,8 +62,8 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#" id="myName"><img src="img/tag.png" data-i18n-alt="logo.alt"
-                    alt="logo of the site" id="logoSite" loading="lazy" /> Nacim Harfouche</a>
+            <a class="navbar-brand" href="#" id="myName"><img src="img/logo-90.webp" data-i18n-alt="logo.alt"
+                    alt="logo of the site" id="logoSite" width="90" height="67" /> Nacim Harfouche</a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav justify-content-between">
                     <a class="nav-item nav-link" id="homeLink" href="#home" data-i18n="nav.home">Home</a>
@@ -68,7 +73,7 @@
                 </div>
             </div>
             <a href="#" id="languageLink"><img data-i18n-src="nav.langFlag" data-i18n-alt="nav.langFlagAlt"
-                    src="img/frenchFlag.png" alt="french flag" loading="lazy" /> <span
+                    src="img/frenchFlag.png" alt="french flag" width="54" height="54" /> <span
                     data-i18n="nav.langLabel">FR</span></a>
         </nav>
     </header>
@@ -93,61 +98,81 @@
                 <li>
                     <a href="https://trainandperform.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <img class="imgMiniature" alt="miniature train and perform web page"
-                            src="img/miniature/train_and_perform.png" loading="lazy" />
+                            src="img/miniature/train_and_perform-320.webp"
+                            srcset="img/miniature/train_and_perform-320.webp 320w, img/miniature/train_and_perform-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/green-office/" target="_blank" rel="noopener noreferrer">
                         <img class="imgMiniature" alt="miniature green office web page"
-                            src="img/miniature/green_office.png" loading="lazy" />
+                            src="img/miniature/green_office-320.webp"
+                            srcset="img/miniature/green_office-320.webp 320w, img/miniature/green_office-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158" loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/fish_chips/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature fish chips web page" src="img/miniature/fish_chips.png"
+                        <img class="imgMiniature" alt="miniature fish chips web page" src="img/miniature/fish_chips-320.webp"
+                            srcset="img/miniature/fish_chips-320.webp 320w, img/miniature/fish_chips-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/ila_yoga/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature ila yoga web page" src="img/miniature/ila_yoga.png"
+                        <img class="imgMiniature" alt="miniature ila yoga web page" src="img/miniature/ila_yoga-320.webp"
+                            srcset="img/miniature/ila_yoga-320.webp 320w, img/miniature/ila_yoga-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/realty_group/" target="_blank" rel="noopener noreferrer">
                         <img class="imgMiniature" alt="miniature realty group web page"
-                            src="img/miniature/realty_group.png" loading="lazy" />
+                            src="img/miniature/realty_group-320.webp"
+                            srcset="img/miniature/realty_group-320.webp 320w, img/miniature/realty_group-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158" loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/creasoul/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature creasoul web page" src="img/miniature/creasoul.png"
+                        <img class="imgMiniature" alt="miniature creasoul web page" src="img/miniature/creasoul-320.webp"
+                            srcset="img/miniature/creasoul-320.webp 320w, img/miniature/creasoul-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/wolf_gang/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature wolf gang web page" src="img/miniature/wolf_gang.png"
+                        <img class="imgMiniature" alt="miniature wolf gang web page" src="img/miniature/wolf_gang-320.webp"
+                            srcset="img/miniature/wolf_gang-320.webp 320w, img/miniature/wolf_gang-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/john_doe_porfolio/" target="_blank"
                         rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature portfolio web page" src="img/miniature/portfolio.jpg"
+                        <img class="imgMiniature" alt="miniature portfolio web page" src="img/miniature/portfolio-320.webp"
+                            srcset="img/miniature/portfolio-320.webp 320w, img/miniature/portfolio-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/mindgeek/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature mindgeek web page" src="img/miniature/mindgeek.png"
+                        <img class="imgMiniature" alt="miniature mindgeek web page" src="img/miniature/mindgeek-320.webp"
+                            srcset="img/miniature/mindgeek-320.webp 320w, img/miniature/mindgeek-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/cup_of_tea/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature cup of tea web page" src="img/miniature/cup_of_tea.png"
+                        <img class="imgMiniature" alt="miniature cup of tea web page" src="img/miniature/cup_of_tea-320.webp"
+                            srcset="img/miniature/cup_of_tea-320.webp 320w, img/miniature/cup_of_tea-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
@@ -155,45 +180,57 @@
                     <a href="https://nacimharfouche.github.io/passwordGenerator/"
                         data-i18n-href="project.passwordGenerator.url" target="_blank" rel="noopener noreferrer">
                         <img class="imgMiniature" alt="miniature passwordGenerator web page"
-                            src="img/miniature/passwordGenerator.png" loading="lazy" />
+                            src="img/miniature/passwordGenerator-320.webp"
+                            srcset="img/miniature/passwordGenerator-320.webp 320w, img/miniature/passwordGenerator-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/calculator/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature calculator web page" src="img/miniature/calculator.png"
+                        <img class="imgMiniature" alt="miniature calculator web page" src="img/miniature/calculator-320.webp"
+                            srcset="img/miniature/calculator-320.webp 320w, img/miniature/calculator-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/todolist_ts/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature todolist web page" src="img/miniature/todolist.jpg"
+                        <img class="imgMiniature" alt="miniature todolist web page" src="img/miniature/todolist-320.webp"
+                            srcset="img/miniature/todolist-320.webp 320w, img/miniature/todolist-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/carousel/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature carousel web page" src="img/miniature/carousel.png"
+                        <img class="imgMiniature" alt="miniature carousel web page" src="img/miniature/carousel-320.webp"
+                            srcset="img/miniature/carousel-320.webp 320w, img/miniature/carousel-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/verify_ean/index.html"
                         data-i18n-href="project.verifyEan.url" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature verify ean web page" src="img/miniature/verify_ean.png"
+                        <img class="imgMiniature" alt="miniature verify ean web page" src="img/miniature/verify_ean-320.webp"
+                            srcset="img/miniature/verify_ean-320.webp 320w, img/miniature/verify_ean-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
                     <a href="https://nacimharfouche.github.io/select_image/" target="_blank" rel="noopener noreferrer">
                         <img class="imgMiniature" alt="miniature select image web page"
-                            src="img/miniature/select_image.png" loading="lazy" />
+                            src="img/miniature/select_image-320.webp"
+                            srcset="img/miniature/select_image-320.webp 320w, img/miniature/select_image-640.webp 640w"
+                            sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
                     </a>
                 </li>
             </ul>
         </section>
         <section class="rounded">
             <h2 id="about" data-i18n="about.title">About me</h2>
-            <p class="aboutStatus"><i class="fas fa-tools"></i> <span data-i18n="about.status">in progress...</span></p>
+            <p class="aboutStatus"><i class="fas fa-tools" aria-hidden="true"></i> <span data-i18n="about.status">in progress...</span></p>
             <p data-i18n="about.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet
                 consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim
@@ -211,7 +248,7 @@
         </section>
         <section class="rounded">
             <h2 id="contact" data-i18n="contact.title">Contact</h2>
-            <p><a class="myEmail" href="mailto:nacim_4@hotmail.fr" aria-label="email"><i class="fas fa-envelope"></i>
+            <p><a class="myEmail" href="mailto:nacim_4@hotmail.fr"><i class="fas fa-envelope" aria-hidden="true"></i>
                     nacim_4@hotmail.fr</a></p>
         </section>
     </main>
@@ -221,24 +258,24 @@
     <footer>
         <p class="text-center">
             © 2019-<span id="year"></span>, <span data-i18n="footer.createdBy">Created by</span>
-            <a href="https://github.com/NacimHarfouche" target="_blank" rel="me noopener noreferrer"
-                aria-label="Github">Nacim Harfouche</a>
+            <a href="https://github.com/NacimHarfouche" target="_blank" rel="me noopener noreferrer">Nacim Harfouche</a>
             <a href="https://twitter.com/nacimharfouche" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
-                    class="fab fa-twitter"></i></a>
+                    class="fab fa-twitter" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/nacim-harfouche/" target="_blank" rel="me noopener noreferrer"
-                aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                aria-label="Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
             <a href="https://github.com/NacimHarfouche" target="_blank" rel="me noopener noreferrer" aria-label="Github"><i
-                    class="fab fa-github"></i></a>
+                    class="fab fa-github" aria-hidden="true"></i></a>
         </p>
     </footer>
     <!-- end footer -->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Bootstrap JS: without Popper, only needed by dropdowns, tooltips and popovers -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
     <!-- i18n system -->
-    <script type="text/javascript" src="js/i18n.js"></script>
+    <script type="text/javascript" src="js/i18n.js" defer></script>
     <!-- if javascript is not supported on the user browser -->
     <noscript>Your browser does not support JavaScript!</noscript>
 </body>

@@ -1,6 +1,11 @@
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Gugi');
-/* @import url('https://fonts.googleapis.com/css?family=VT323'); */
+/* Font: Gugi, latin subset, self-hosted (SIL Open Font License, fonts/OFL.txt) */
+@font-face {
+	font-family: "Gugi";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/gugi-latin.woff2") format("woff2");
+}
 
 /***********/
 /* Global */
@@ -15,7 +20,7 @@ html {
 }
 
 body {
-	background: url("../img/beige.jpg") fixed border-box no-repeat;
+	background: url("../img/beige.webp") fixed border-box no-repeat;
 	font-size: 1.6rem;
 }
 
@@ -167,6 +172,11 @@ li:hover {
 	/* Add a dark-grey background on hover */
 }
 
+#myBtnToTop:focus-visible {
+	outline: 3px solid #555;
+	outline-offset: 2px;
+}
+
 .myEmail {
 	color: black;
 }
@@ -252,5 +262,14 @@ footer {
 
 	.imgMiniature:visited {
 		box-shadow: 2px 2px 5px black;
+	}
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		scroll-behavior: auto !important;
 	}
 }
