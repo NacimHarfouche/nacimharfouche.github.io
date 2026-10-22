@@ -51,6 +51,7 @@ jobs:
         # exit status would be lost in the pipe to tr.
         shell: bash
         run: |
+          # package.json is npm metadata: the browser never loads its paths.
           mapfile -t files < <(git ls-files '*.js' '*.json' ':(exclude)package.json')
           chars="[^\"'[:space:]:]"
           ext="\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)"
