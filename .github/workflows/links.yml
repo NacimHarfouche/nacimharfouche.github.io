@@ -18,8 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      # sitemap.xml is left out: its only URL is index.html's canonical link,
-      # checked here. Adding it means excluding its sitemaps.org namespace.
+      # sitemap.xml is left out: its URLs are the canonical links of the two
+      # pages, checked here. Adding it means excluding its sitemaps.org
+      # namespace.
+      # The remap checks /en/ (the English page's canonical link, and the
+      # French page's hreflang link) against the file of this branch: before
+      # the merge that URL answers 404 in production.
       - name: Check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
@@ -27,11 +31,12 @@ jobs:
             --no-progress
             --config .github/lychee.toml
             --root-dir ${{ github.workspace }}
+            --remap '^https://nacimharfouche\.com/en/$ file://${{ github.workspace }}/en/index.html'
             index.html
+            en/index.html
             404.html
             README.md
             package.json
-            js/i18n.js
             css/style.css
 
   local-paths:
@@ -40,14 +45,16 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       # lychee reads JS and the web manifest as plain text and only finds
-      # absolute URLs, so relative paths written there (the language flag, the
-      # manifest icons) are checked here.
+      # absolute URLs, so relative paths written there (the manifest icons) are
+      # checked here.
       # A path is one quoted string with a "/", no space and no ":" (URLs stay
       # with lychee), ending in one of the lowercase extensions listed in ext.
       # Paths built at runtime ("img/" + name, template literals) are not seen.
-      # The browser resolves them against the page that loads the script (the
-      # only one is index.html) or against the manifest itself: both sit at
-      # the root, so they are checked from the root.
+      # The browser resolves them against the manifest itself, at the root, or
+      # against the page that loads the script. The scripts are loaded by
+      # index.html and en/index.html, one folder apart, and hold no path
+      # today: a path added there would only be right for one of the pages.
+      # Everything is checked from the root.
       - name: Check local paths in JS and the web manifest
         # Without it the step runs as "bash -e", without pipefail, and grep's
         # exit status would be lost in the pipe to tr.

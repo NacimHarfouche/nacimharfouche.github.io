@@ -20,7 +20,8 @@ iElt.ariaHidden = "true";
 
 let buttonElt = document.createElement("button");
 buttonElt.id = "myBtnToTop";
-buttonElt.ariaLabel = "to go up";
+// Each page carries its own language (index.html in French, en/index.html in English)
+buttonElt.ariaLabel = document.documentElement.lang === "fr" ? "Remonter en haut de la page" : "Back to top";
 
 buttonElt.appendChild(iElt);
 document.body.appendChild(buttonElt);

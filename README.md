@@ -3,6 +3,7 @@
 https://nacimharfouche.com/
 
 - Served by GitHub Pages; `nacimharfouche.github.io` and `www.nacimharfouche.com` redirect to it with the path kept; `nacimharfouche.fr` redirects to its home page
+- Two pages, one per language: `index.html` in French at `/`, `en/index.html` in English at `/en/`. Each one carries its text in the HTML (no translation script), its own canonical link and the same `hreflang` links; `x-default` points to the French page. A text change is made in both files
 - Netlify builds a preview of each pull request; its production copy (`nacimharfouche.netlify.app`) redirects to the site (`_redirects`)
 
 This is the repo of my current portfolio, powered with HTML5, CSS3, Javascript, Jquery, NPM, Bootstrap, Font Awesome... 
