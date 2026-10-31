@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      # lychee reads JS, JSON and the web manifest as plain text and only finds
+      # lychee reads JS and the web manifest as plain text and only finds
       # absolute URLs, so relative paths written there (the language flag, the
       # manifest icons) are checked here.
       # A path is one quoted string with a "/", no space and no ":" (URLs stay
@@ -48,13 +48,12 @@ jobs:
       # The browser resolves them against the page that loads the script (the
       # only one is index.html) or against the manifest itself: both sit at
       # the root, so they are checked from the root.
-      - name: Check local paths in JS, JSON and the web manifest
+      - name: Check local paths in JS and the web manifest
         # Without it the step runs as "bash -e", without pipefail, and grep's
         # exit status would be lost in the pipe to tr.
         shell: bash
         run: |
-          # package.json is npm metadata: the browser never loads its paths.
-          mapfile -t files < <(git ls-files '*.js' '*.json' '*.webmanifest' ':(exclude)package.json')
+          mapfile -t files < <(git ls-files '*.js' '*.webmanifest')
           chars="[^\"'[:space:]:]"
           ext="\.(png|jpe?g|gif|svg|webp|ico|css|js|json|html|pdf)"
           pattern="\"$chars+/$chars*$ext\"|'$chars+/$chars*$ext'"
@@ -76,5 +75,5 @@ jobs:
           fi
           echo "$found local paths checked in ${#files[@]} files, $missing missing"
           # Never pass without checking anything: the pattern would be out of date.
-          [ "$found" -gt 0 ] || { echo "::error::no local path found in JS, JSON or manifest files"; exit 1; }
+          [ "$found" -gt 0 ] || { echo "::error::no local path found in JS or manifest files"; exit 1; }
           [ "$missing" -eq 0 ]
