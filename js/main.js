@@ -30,10 +30,11 @@ window.onscroll = () => {
 	buttonElt.style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? "block" : "none";
 };
 
-// When the user clicks on the button, scroll to the top smoothly
+// When the user clicks on the button, scroll to the top (smoothly, unless reduced motion is requested)
 buttonElt.addEventListener("click", () => {
-	document.body.scrollTo({ top: 0, behavior: 'smooth' });
-	document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+	let behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+	document.body.scrollTo({ top: 0, behavior: behavior });
+	document.documentElement.scrollTo({ top: 0, behavior: behavior });
 });
 
 // Click on nav link to close mobile menu
