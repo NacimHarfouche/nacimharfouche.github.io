@@ -1,0 +1,6 @@
+# Netlify only (GitHub Pages ignores this file): the production copy on
+# netlify.app redirects to the canonical domain (issue #3).
+# The rule names the production host on purpose: deploy previews
+# (deploy-preview-<N>--nacimharfouche.netlify.app) do not match it and keep
+# serving the pull request.
+https://nacimharfouche.netlify.app/* https://nacimharfouche.com/:splat 301!

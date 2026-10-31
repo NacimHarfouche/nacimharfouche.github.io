@@ -1,0 +1,10 @@
+# Served at the root of nacimharfouche.com, so it also applies to every
+# project site published under it (/<repository>/): crawlers ignore a
+# robots.txt placed in a project.
+User-agent: *
+Allow: /
+# Markdown files (README.md here and in the projects) are published but are
+# not pages.
+Disallow: /*.md$
+
+Sitemap: https://nacimharfouche.com/sitemap.xml
