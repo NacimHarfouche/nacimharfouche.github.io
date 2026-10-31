@@ -7,6 +7,10 @@ include_fragments = "anchor-only"
 exclude = [
   # LinkedIn answers 999 to every robot (seen in PR #8): check it by hand.
   '^https://(www\.)?linkedin\.com/',
+  # Malt answers 403 to robots (not always, so the check would flicker): check it by hand.
+  '^https://(www\.)?malt\.fr/',
+  # X answers 403 to the GitHub runners (200 elsewhere, seen in PR #20): check it by hand.
+  '^https://(www\.)?x\.com/',
 ]
 
 remap = [
@@ -14,6 +18,3 @@ remap = [
   # check the repository page without the anchor.
   '^(https://github\.com/[^#]+)#readme$ $1',
 ]
-
-# twitter.com is excluded by lychee's own defaults, so the footer link is never
-# checked here. It redirects to x.com (301), which answers 200: check it by hand.
