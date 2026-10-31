@@ -32,6 +32,12 @@ header nav {
 	font-size: 1.6rem;
 }
 
+/* keep the logo and the language button off the screen edges (Bootstrap's own
+   setting, which .navbar resets to 0: hence the more specific selector) */
+header .navbar {
+	--bs-navbar-padding-x: 1.6rem;
+}
+
 #myName {
 	font-family: "Gugi";
 	font-size: 2rem;
@@ -394,6 +400,15 @@ footer {
 
 	.imgMiniature:visited {
 		box-shadow: 2px 2px 5px black;
+	}
+}
+
+/* Very small phones (below 360px at the default browser font size): a smaller name
+   keeps the navbar on one line down to 320px. In em, the threshold grows with the
+   font size the visitor picks in the browser, like the navbar content does. */
+@media All and (max-width: 22.4375em) {
+	#myName {
+		font-size: 1.6rem;
 	}
 }
 
