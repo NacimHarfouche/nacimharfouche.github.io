@@ -33,7 +33,8 @@
     <link rel="manifest" href="../manifest.webmanifest">
     <!-- title page -->
     <title>Nacim Harfouche</title>
-    <!-- the one address search engines should index (github.io, www, .fr and netlify.app redirect to it) -->
+    <!-- the one address search engines should index for the English page (github.io, www and netlify.app
+        keep the path when they redirect; .fr only redirects to the French home page) -->
     <link rel="canonical" href="https://nacimharfouche.com/en/">
     <!-- the same page in each language (issue #5): search engines show each visitor the right one;
         x-default: the French page for every other language -->
@@ -80,8 +81,8 @@
                     <a class="nav-item nav-link" id="contactLink" href="#contact">Contact</a>
                 </div>
             </div>
-            <a href="../" id="languageLink" hreflang="fr" lang="fr"><img src="../img/frenchFlag.png"
-                    alt="Version française" width="54" height="54" /> <span>FR</span></a>
+            <a href="../" id="languageLink" hreflang="fr" lang="fr" aria-label="FR, version française"><img
+                    src="../img/frenchFlag.png" alt="" width="54" height="54" /> <span>FR</span></a>
         </nav>
     </header>
     <!-- end header -->
@@ -94,10 +95,10 @@
         </section>
         <section class="rounded">
             <h2 id="home">Home</h2>
-            <p>Welcome, I'm a french full stack web developer, passionate about the realization
+            <p>Welcome, I'm a French full stack web developer, passionate about the realization
                 and development of web projects, I turned towards a career as a web developer in 2018. I joined the 3W
                 Academy where I completed a developer integrator training in the realization of web applications (back &
-                front ) that I validated in April 2019.</p>
+                front) that I validated in April 2019.</p>
         </section>
         <section class="rounded">
             <h2 id="projet">Projects</h2>

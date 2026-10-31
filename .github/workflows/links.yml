@@ -21,9 +21,11 @@ jobs:
       # sitemap.xml is left out: its URLs are the canonical links of the two
       # pages, checked here. Adding it means excluding its sitemaps.org
       # namespace.
-      # The remap checks /en/ (the English page's canonical link, and the
-      # French page's hreflang link) against the file of this branch: before
-      # the merge that URL answers 404 in production.
+      # Except on the weekly run, the remap checks /en/ (the English page's
+      # canonical link, and the French page's hreflang link) against the file
+      # of the checkout: a pull request's page answers 404 in production before
+      # its merge, and on push Pages may not have deployed it yet. The weekly
+      # run checks production itself.
       - name: Check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
@@ -31,7 +33,7 @@ jobs:
             --no-progress
             --config .github/lychee.toml
             --root-dir ${{ github.workspace }}
-            --remap '^https://nacimharfouche\.com/en/$ file://${{ github.workspace }}/en/index.html'
+            ${{ github.event_name != 'schedule' && format('--remap ''^https://nacimharfouche\.com/en/$ file://{0}/en/index.html''', github.workspace) || '' }}
             index.html
             en/index.html
             404.html
