@@ -5,11 +5,11 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
-    <meta name="description" content="Nacim Harfouche Full Stack Web Developer">
+    <meta name="description" content="Nacim Harfouche, développeur web full stack">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Open Graph -->
-    <meta property="og:title" content="Nacim Harfouche — Web Developer">
+    <meta property="og:title" content="Nacim Harfouche — Développeur web">
     <meta property="og:description" content="Portfolio de Nacim Harfouche, développeur web full stack.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nacimharfouche.com/">
@@ -19,7 +19,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@nacimharfouche">
-    <meta name="twitter:title" content="Nacim Harfouche — Web Developer">
+    <meta name="twitter:title" content="Nacim Harfouche — Développeur web">
     <meta name="twitter:description" content="Portfolio de Nacim Harfouche, développeur web full stack.">
     <meta name="twitter:image" content="https://nacimharfouche.com/img/tag.png">
     <!-- CDN connections opened early -->
@@ -35,6 +35,11 @@
     <title>Nacim Harfouche</title>
     <!-- the one address search engines should index (github.io, www, .fr and netlify.app redirect to it) -->
     <link rel="canonical" href="https://nacimharfouche.com/">
+    <!-- the same page in each language (issue #5): search engines show each visitor the right one;
+        x-default: the French page for every other language -->
+    <link rel="alternate" hreflang="fr" href="https://nacimharfouche.com/">
+    <link rel="alternate" hreflang="en" href="https://nacimharfouche.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://nacimharfouche.com/">
     <!-- normalize css -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- CSS style sheet -->
@@ -62,22 +67,21 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Ouvrir le menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#" id="myName"><img src="img/logo-90.webp" data-i18n-alt="logo.alt"
-                    alt="logo of the site" id="logoSite" width="90" height="67" fetchpriority="high" /> Nacim Harfouche</a>
+            <a class="navbar-brand" href="#" id="myName"><img src="img/logo-90.webp"
+                    alt="logo du site" id="logoSite" width="90" height="67" fetchpriority="high" /> Nacim Harfouche</a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav justify-content-between">
-                    <a class="nav-item nav-link" id="homeLink" href="#home" data-i18n="nav.home">Home</a>
-                    <a class="nav-item nav-link" id="projetLink" href="#projet" data-i18n="nav.projects">Projects</a>
-                    <a class="nav-item nav-link" id="aboutLink" href="#about" data-i18n="nav.about">About Me</a>
-                    <a class="nav-item nav-link" id="contactLink" href="#contact" data-i18n="nav.contact">Contact</a>
+                    <a class="nav-item nav-link" id="homeLink" href="#home">Accueil</a>
+                    <a class="nav-item nav-link" id="projetLink" href="#projet">Mes projets</a>
+                    <a class="nav-item nav-link" id="aboutLink" href="#about">À propos de moi</a>
+                    <a class="nav-item nav-link" id="contactLink" href="#contact">Contact</a>
                 </div>
             </div>
-            <a href="#" id="languageLink"><img data-i18n-src="nav.langFlag" data-i18n-alt="nav.langFlagAlt"
-                    src="img/frenchFlag.png" alt="french flag" width="54" height="54" /> <span
-                    data-i18n="nav.langLabel">FR</span></a>
+            <a href="en/" id="languageLink" hreflang="en" lang="en" aria-label="EN, English version"><img
+                    src="img/USFlag.png" alt="" width="54" height="54" /> <span>EN</span></a>
         </nav>
     </header>
     <!-- end header -->
@@ -86,21 +90,21 @@
     <main>
         <section class="rounded">
             <h1>Nacim Harfouche</h1>
-            <h2 data-i18n="hero.subtitle">Web Developer</h2>
+            <h2>Developpeur Web</h2>
         </section>
         <section class="rounded">
-            <h2 id="home" data-i18n="home.title">Home</h2>
-            <p data-i18n="home.text">Welcome, I'm a french full stack web developer, passionate about the realization
-                and development of web projects, I turned towards a career as a web developer in 2018. I joined the 3W
-                Academy where I completed a developer integrator training in the realization of web applications (back &
-                front ) that I validated in April 2019.</p>
+            <h2 id="home">Accueil</h2>
+            <p>Bienvenue à toi, je suis développeur web full stack français, passionné par la
+                réalisation et le développement de projets web, je me suis orienté vers une carrière de développeur web
+                en 2018. J'ai rejoint la 3W Academy où j'ai complété une formation de développeur intégrateur dans la
+                réalisation d'applications web (back et front) que j'ai validée en avril 2019.</p>
         </section>
         <section class="rounded">
-            <h2 id="projet" data-i18n="projects.title">Projects</h2>
+            <h2 id="projet">Projets</h2>
             <ul class="listProjects">
                 <li>
                     <a href="https://trainandperform.netlify.app/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature train and perform web page"
+                        <img class="imgMiniature" alt="aperçu du site train and perform"
                             src="img/miniature/train_and_perform-320.webp"
                             srcset="img/miniature/train_and_perform-320.webp 320w, img/miniature/train_and_perform-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
@@ -108,7 +112,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/green-office/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature green office web page"
+                        <img class="imgMiniature" alt="aperçu du site green office"
                             src="img/miniature/green_office-320.webp"
                             srcset="img/miniature/green_office-320.webp 320w, img/miniature/green_office-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158" loading="lazy" />
@@ -116,7 +120,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/fish_chips/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature fish chips web page" src="img/miniature/fish_chips-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site fish chips" src="img/miniature/fish_chips-320.webp"
                             srcset="img/miniature/fish_chips-320.webp 320w, img/miniature/fish_chips-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -124,7 +128,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/ila_yoga/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature ila yoga web page" src="img/miniature/ila_yoga-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site ila yoga" src="img/miniature/ila_yoga-320.webp"
                             srcset="img/miniature/ila_yoga-320.webp 320w, img/miniature/ila_yoga-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -132,7 +136,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/realty_group/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature realty group web page"
+                        <img class="imgMiniature" alt="aperçu du site realty group"
                             src="img/miniature/realty_group-320.webp"
                             srcset="img/miniature/realty_group-320.webp 320w, img/miniature/realty_group-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158" loading="lazy" />
@@ -140,7 +144,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/creasoul/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature creasoul web page" src="img/miniature/creasoul-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site creasoul" src="img/miniature/creasoul-320.webp"
                             srcset="img/miniature/creasoul-320.webp 320w, img/miniature/creasoul-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -148,7 +152,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/wolf_gang/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature wolf gang web page" src="img/miniature/wolf_gang-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site wolf gang" src="img/miniature/wolf_gang-320.webp"
                             srcset="img/miniature/wolf_gang-320.webp 320w, img/miniature/wolf_gang-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -157,7 +161,7 @@
                 <li>
                     <a href="https://nacimharfouche.com/john_doe_porfolio/" target="_blank"
                         rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature portfolio web page" src="img/miniature/portfolio-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site portfolio" src="img/miniature/portfolio-320.webp"
                             srcset="img/miniature/portfolio-320.webp 320w, img/miniature/portfolio-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -165,7 +169,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/mindgeek/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature mindgeek web page" src="img/miniature/mindgeek-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site mindgeek" src="img/miniature/mindgeek-320.webp"
                             srcset="img/miniature/mindgeek-320.webp 320w, img/miniature/mindgeek-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
@@ -173,16 +177,16 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/cup_of_tea/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature cup of tea web page" src="img/miniature/cup_of_tea-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site cup of tea" src="img/miniature/cup_of_tea-320.webp"
                             srcset="img/miniature/cup_of_tea-320.webp 320w, img/miniature/cup_of_tea-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="158"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
-                    <a href="https://nacimharfouche.com/passwordGenerator/"
-                        data-i18n-href="project.passwordGenerator.url" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature passwordGenerator web page"
+                    <a href="https://nacimharfouche.com/passwordGenerator/fr/index.html"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="aperçu du site passwordGenerator"
                             src="img/miniature/passwordGenerator-320.webp"
                             srcset="img/miniature/passwordGenerator-320.webp 320w, img/miniature/passwordGenerator-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
@@ -190,7 +194,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/calculator/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature calculator web page" src="img/miniature/calculator-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site calculator" src="img/miniature/calculator-320.webp"
                             srcset="img/miniature/calculator-320.webp 320w, img/miniature/calculator-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
@@ -198,7 +202,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/todolist_ts/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature todolist web page" src="img/miniature/todolist-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site todolist" src="img/miniature/todolist-320.webp"
                             srcset="img/miniature/todolist-320.webp 320w, img/miniature/todolist-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
@@ -206,16 +210,16 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/carousel/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature carousel web page" src="img/miniature/carousel-320.webp"
+                        <img class="imgMiniature" alt="aperçu du site carousel" src="img/miniature/carousel-320.webp"
                             srcset="img/miniature/carousel-320.webp 320w, img/miniature/carousel-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
                     </a>
                 </li>
                 <li>
-                    <a href="https://nacimharfouche.com/verify_ean/index.html"
-                        data-i18n-href="project.verifyEan.url" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature verify ean web page" src="img/miniature/verify_ean-320.webp"
+                    <a href="https://nacimharfouche.com/verify_ean/fr.html"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="imgMiniature" alt="aperçu du site verify ean" src="img/miniature/verify_ean-320.webp"
                             srcset="img/miniature/verify_ean-320.webp 320w, img/miniature/verify_ean-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156"
                             loading="lazy" />
@@ -223,7 +227,7 @@
                 </li>
                 <li>
                     <a href="https://nacimharfouche.com/select_image/" target="_blank" rel="noopener noreferrer">
-                        <img class="imgMiniature" alt="miniature select image web page"
+                        <img class="imgMiniature" alt="aperçu du site select image"
                             src="img/miniature/select_image-320.webp"
                             srcset="img/miniature/select_image-320.webp 320w, img/miniature/select_image-640.webp 640w"
                             sizes="(max-width: 767px) 300px, 250px" width="320" height="156" loading="lazy" />
@@ -232,16 +236,16 @@
             </ul>
         </section>
         <section class="rounded">
-            <h2 id="about" data-i18n="about.title">About me</h2>
-            <p class="aboutStatus"><i class="fas fa-tools" aria-hidden="true"></i> <span data-i18n="about.status">in progress...</span></p>
-            <p data-i18n="about.text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <h2 id="about">A propos de moi</h2>
+            <p class="aboutStatus"><i class="fas fa-tools" aria-hidden="true"></i> <span>en cours...</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet
                 consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim
                 lobortis scelerisque fermentum dui faucibus in. Iaculis eu non diam phasellus vestibulum. Elit sed
                 vulputate mi sit amet. Diam phasellus vestibulum lorem sed risus. Morbi quis commodo odio aenean sed
                 adipiscing. Elit sed vulputate mi sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
                 Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-            <p data-i18n="about.text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et. Sit amet
                 consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dignissim diam quis enim
                 lobortis scelerisque fermentum dui faucibus in. Iaculis eu non diam phasellus vestibulum. Elit sed
@@ -250,7 +254,7 @@
                 Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
         </section>
         <section class="rounded">
-            <h2 id="contact" data-i18n="contact.title">Contact</h2>
+            <h2 id="contact">Contact</h2>
             <p><a class="myEmail" href="mailto:nacim_4@hotmail.fr"><i class="fas fa-envelope" aria-hidden="true"></i>
                     nacim_4@hotmail.fr</a></p>
         </section>
@@ -260,7 +264,7 @@
     <!-- begin footer -->
     <footer>
         <p class="text-center">
-            © 2019-<span id="year"></span>, <span data-i18n="footer.createdBy">Created by</span>
+            © 2019-<span id="year">2026</span>, <span>Créé par</span>
             <a href="https://github.com/NacimHarfouche" target="_blank" rel="me noopener noreferrer">Nacim Harfouche</a>
             <a href="https://twitter.com/nacimharfouche" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
                     class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -277,10 +281,6 @@
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous" defer></script>
     <script type="text/javascript" src="js/main.js" defer></script>
-    <!-- i18n system -->
-    <script type="text/javascript" src="js/i18n.js" defer></script>
-    <!-- if javascript is not supported on the user browser -->
-    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
 
 </html>

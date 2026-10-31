@@ -16,11 +16,13 @@ footerSpanYearElt.textContent = "" + year;
 // **Button to go to the top**
 let iElt = document.createElement("i");
 iElt.className = "fas fa-chevron-up";
-iElt.ariaHidden = "true";
+iElt.setAttribute("aria-hidden", "true");
 
 let buttonElt = document.createElement("button");
 buttonElt.id = "myBtnToTop";
-buttonElt.ariaLabel = "to go up";
+// Each page carries its own language (index.html in French, en/index.html in English)
+// setAttribute, not the ariaLabel property: Firefox only reflects it since version 119
+buttonElt.setAttribute("aria-label", document.documentElement.lang.startsWith("fr") ? "Remonter en haut de la page" : "Back to top");
 
 buttonElt.appendChild(iElt);
 document.body.appendChild(buttonElt);
