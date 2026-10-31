@@ -32,8 +32,6 @@ jobs:
             README.md
             package.json
             js/i18n.js
-            lang/en.json
-            lang/fr.json
             css/style.css
 
   local-paths:
