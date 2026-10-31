@@ -33,6 +33,7 @@ jobs:
             lang/en.json
             lang/fr.json
             css/style.css
+            sitemap.xml
 
   local-paths:
     runs-on: ubuntu-latest

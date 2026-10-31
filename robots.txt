@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# Markdown files (README.md) are published but are not pages.
+Disallow: /*.md$
+
+Sitemap: https://nacimharfouche.com/sitemap.xml

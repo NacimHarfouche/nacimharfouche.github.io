@@ -30,8 +30,8 @@ const I18N = (() => {
 			"footer.createdBy": "Created by",
 			"noscript": "Your browser does not support JavaScript!",
 			"logo.alt": "logo of the site",
-			"project.passwordGenerator.url": "https://nacimharfouche.github.io/passwordGenerator/",
-			"project.verifyEan.url": "https://nacimharfouche.github.io/verify_ean/index.html"
+			"project.passwordGenerator.url": "https://nacimharfouche.com/passwordGenerator/",
+			"project.verifyEan.url": "https://nacimharfouche.com/verify_ean/index.html"
 		},
 		fr: {
 			"htmlLang": "fr",
@@ -55,8 +55,8 @@ const I18N = (() => {
 			"footer.createdBy": "Créé par",
 			"noscript": "Votre navigateur ne supporte pas JavaScript!",
 			"logo.alt": "logo du site",
-			"project.passwordGenerator.url": "https://nacimharfouche.github.io/passwordGenerator/fr/index.html",
-			"project.verifyEan.url": "https://nacimharfouche.github.io/verify_ean/fr.html"
+			"project.passwordGenerator.url": "https://nacimharfouche.com/passwordGenerator/fr/index.html",
+			"project.verifyEan.url": "https://nacimharfouche.com/verify_ean/fr.html"
 		}
 	};
 

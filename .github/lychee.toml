@@ -7,6 +7,8 @@ include_fragments = "anchor-only"
 exclude = [
   # LinkedIn answers 999 to every robot (seen in PR #8): check it by hand.
   '^https://(www\.)?linkedin\.com/',
+  # The sitemap's XML namespace is an identifier, not a page to visit.
+  '^http://www\.sitemaps\.org/schemas/sitemap/0\.9$',
 ]
 
 remap = [
