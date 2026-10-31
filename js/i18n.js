@@ -1,6 +1,7 @@
 /**
  * i18n.js — Internationalization module
- * Detects browser language, loads translations, and applies them to the DOM.
+ * Detects browser language and applies the translations held in TRANSLATIONS
+ * (below) to the DOM.
  * Supports FR (if browser is francophone) and EN (default for all others).
  */
 
