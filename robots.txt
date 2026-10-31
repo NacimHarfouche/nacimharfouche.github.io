@@ -1,6 +1,9 @@
+# Served at the root of nacimharfouche.com, so it also applies to the project
+# sites published under it (/green-office/, /verify_ean/...).
 User-agent: *
 Allow: /
-# Markdown files (README.md) are published but are not pages.
+# Markdown files (README.md here and in the projects) are published but are
+# not pages.
 Disallow: /*.md$
 
 Sitemap: https://nacimharfouche.com/sitemap.xml
