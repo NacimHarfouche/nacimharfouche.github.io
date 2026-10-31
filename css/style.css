@@ -17,8 +17,10 @@
 
 html {
 	font-size: 62.5%;
-	/* in-page links land below the fixed navbar */
+	/* in-page links land below the fixed navbar; --nav-height (set by js/main.js)
+	   only matters when the navbar wraps onto two lines (large browser font) */
 	scroll-padding-top: 7rem;
+	scroll-padding-top: max(7rem, calc(var(--nav-height, 0px) + 2rem));
 }
 
 body {
@@ -96,7 +98,9 @@ header .navbar {
 /* main */
 /*******/
 main {
+	/* below the fixed navbar, even when it wraps (see --nav-height above) */
 	margin-top: 6.5rem;
+	margin-top: max(6.5rem, calc(var(--nav-height, 0px) + 1.6rem));
 }
 
 main section {
