@@ -47,3 +47,19 @@ for (let a of aInNavElt) {
 		}
 	});
 }
+
+// Navbar height, for the space kept under it (css/style.css, --nav-height): it only matters
+// when the navbar wraps onto two lines (large browser font). Runs on resize and font load.
+const navElt = document.querySelector("header nav");
+const navCollapseElt = navElt && navElt.querySelector(".navbar-collapse");
+if (navCollapseElt && "ResizeObserver" in window) {
+	let lastNavHeight = "";
+	new ResizeObserver(() => {
+		// the open mobile menu is left out, so opening it does not move the page
+		if (navCollapseElt.matches(".show, .collapsing")) return;
+		const navHeight = navElt.getBoundingClientRect().height + "px";
+		if (navHeight === lastNavHeight) return;
+		lastNavHeight = navHeight;
+		document.documentElement.style.setProperty("--nav-height", navHeight);
+	}).observe(navElt);
+}
