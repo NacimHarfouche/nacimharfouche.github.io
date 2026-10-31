@@ -2,7 +2,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0f4e90b9-a61c-4ad2-be7c-0b96b781597b/deploy-status)](https://app.netlify.com/sites/nacimharfouche/deploys)
 https://nacimharfouche.com/
 
-- Served by GitHub Pages; `nacimharfouche.github.io`, `www.nacimharfouche.com` redirect to it, path included; `nacimharfouche.fr` redirects to its home page
+- Served by GitHub Pages; `nacimharfouche.github.io` and `www.nacimharfouche.com` redirect to it with the path kept; `nacimharfouche.fr` redirects to its home page
 - Netlify builds a preview of each pull request; its production copy (`nacimharfouche.netlify.app`) redirects to the site (`_redirects`)
 
 This is the repo of my current portfolio, powered with HTML5, CSS3, Javascript, Jquery, NPM, Bootstrap, Font Awesome... 
